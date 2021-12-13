@@ -48,8 +48,8 @@ class GeneticAlgorithm(Algorithm):
             x: list[int] = [random.randint(0, 1) for _ in range(problem.meta_data.n_variables)]
             
     
-    def generatingPopulation(size: int, )
-        pass
+ #   def generatingPopulation(size: int, )
+ #      pass
         
         
         
