@@ -40,16 +40,31 @@ class RandomSearch(Algorithm):
             
 class GeneticAlgorithm(Algorithm):
     '''A skeleton (minimal) implementation of your Genetic Algorithm.'''
-    
+    def __init__(self, max_iterations: int = 100, population_n: int = 100, ):
+        super().__init__(max_iterations=max_iterations)
+
+    def generatingPopulation (self, variables: int = 5):
+        x: list[int] = [random.randint(0, 1) for _ in range(variables)]
+        return x
+
+    def selection_fitness (self, x):
+        pass
+
+    def single_crossover (self, x):
+        pass
+
+    def multiple_crossover (self, x):
+        pass
+
+    def generatingPopulation (self, x):
+        pass
+
     def __call__(self, problem: ioh.problem.Integer) -> None:
         self.y_best: float = float("inf") #for finding the highest value
         for iteration in range(self.max_iterations):
             #creating random list
             x: list[int] = [random.randint(0, 1) for _ in range(problem.meta_data.n_variables)]
-            
-    
- #   def generatingPopulation(size: int, )
- #      pass
+
         
         
         
