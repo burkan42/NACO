@@ -45,12 +45,15 @@ class GeneticAlgorithm(Algorithm):
 
     def generatingPopulation (self, variables: int = 5):
         x: list[int] = [random.randint(0, 1) for _ in range(variables)]
+        
         return x
 
     def selection_fitness (self, x):
+    
         pass
 
-    def single_crossover (self, x):
+    def single_crossover (self, ):
+        point = random.int(0,self.variables)
         pass
 
     def multiple_crossover (self, x):
@@ -73,7 +76,7 @@ def main():
     random.seed(42)
 
     # Instantiate the algoritm, you should replace this with your GA implementation 
-    algorithm = RandomSearch()
+    algorithm = GeneticAlgorithm()
 
     # Get a problem from the IOHexperimenter environment
     problem: ioh.problem.Integer = ioh.get_problem(1, 1, 5, "Integer")
